@@ -1,0 +1,31 @@
+**<!-- history.html -->**
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>예측 히스토리</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-2xl shadow">
+        <h1 class="text-2xl font-bold mb-4">{{ username }}님의 진단 기록</h1>
+
+        {% if records %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {% for image_path, result, confidence, timestamp in records %}
+            <div class="bg-gray-50 p-4 rounded-xl shadow">
+                <img src="{{ url_for('static', filename='uploads/' + image_path) }}" alt="업로드 이미지" class="w-full h-48 object-cover rounded">
+                <p class="mt-2 font-semibold">결과: {{ result }}</p>
+                <p class="text-sm text-gray-600">정확도: {{ confidence }}%</p>
+                <p class="text-sm text-gray-500">진단 시각: {{ timestamp }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="text-gray-500">아직 진단 기록이 없습니다.</p>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="text-blue-600 underline mt-6 inline-block">← 홈으로</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>재학습 중...</title>
+  <style>
+    body { text-align: center; font-family: Arial; padding-top: 100px; }
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      width: 120px; height: 120px;
+      animation: spin 2s linear infinite;
+      margin: 0 auto 30px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <h2>모델을 재학습 중입니다... 잠시만 기다려주세요 🙏</h2>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "/done";
+    }, 7000); // 학습 시간 고려 후 조절
+  </script>
+</body>
+</html>
