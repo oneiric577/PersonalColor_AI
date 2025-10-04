@@ -53,7 +53,7 @@ PersonalColor_AI/
 
 ├── templates/
 
-│   └── *.html              # Jinja2 기반 HTML 템플릿
+│   └── *.html              
 
 └── README.md
 
