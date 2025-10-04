@@ -38,6 +38,7 @@ AI 모델: scikit-learn, OpenCV (또는 사용한 이미지 처리 라이브러�
 프론트엔드: HTML, CSS
 
 PersonalColor_AI/
+
 ├── app.py                  # 메인 웹앱 실행 파일
 
 ├── retrain.py              # 모델 재학습 스크립트
@@ -47,9 +48,13 @@ PersonalColor_AI/
 ├── users.db                # 사용자 데이터 저장 (SQLite)
 
 ├── static/
+
 │   └── img/                # 이미지 리소스
+
 ├── templates/
+
 │   └── *.html              # Jinja2 기반 HTML 템플릿
+
 └── README.md
 
 📌 퍼스널 컬러 타입이란?
